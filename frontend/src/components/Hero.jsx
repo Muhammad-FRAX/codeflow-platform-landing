@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { codeExamples } from "../data/CodeExamples";
+//import SyntaxHighlighter from "react-syntax-highlighter";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism"; // Options: nightOwl, twilight,atomDark..
+import { codeExamples, floatingCards } from "../data/CodeExamples";
 
 // Export
 export default function Hero() {
@@ -18,6 +20,8 @@ export default function Hero() {
 
     return () => window.removeEventListener("mousemove", hadndleMouseMove);
   }, []);
+
+  const currentFloatingTab = floatingCards[activeTab];
 
   // Render the Hero component
   return (
@@ -85,10 +89,44 @@ export default function Hero() {
 
               {/* Code content */}
               <div className="relative overflow-hidden flex-grow ">
-                <SyntaxHighlighter language="javascript">
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={atomDark}
+                  customStyle={{
+                    margin: 0,
+                    height: "100%",
+                    borderRadius: "8px",
+                    fontSize: "11px",
+                    lineHeight: "1.4",
+                    border: "1px solid #3c3c3c",
+                  }}
+                >
                   {codeExamples[activeTab]}
                 </SyntaxHighlighter>
               </div>
+            </div>
+          </div>
+
+          {/* Floating cards */}
+          <div
+            className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 translate-y-8 w-72 ${currentFloatingTab.bgColor} backdrop-blur-xl rounded-lg p-4 border border-white/20 shadow-2xl`}
+          >
+            <div className="flex items-center space-x-2 mb-2">
+              <div
+                className={`w-6 h-6 ${currentFloatingTab.iconColor} flex items-center justify-center text-sm font-bold`}
+              >
+                {currentFloatingTab.icon}
+              </div>
+              <span
+                className={`text-sm font-medium ${currentFloatingTab.textColor}`}
+              >
+                {currentFloatingTab.title}
+              </span>
+            </div>
+            <div
+              className={`text-sm text-left ${currentFloatingTab.contentColor}`}
+            >
+              {currentFloatingTab.content}
             </div>
           </div>
         </div>
