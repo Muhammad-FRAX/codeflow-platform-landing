@@ -1,6 +1,6 @@
 # CodeFlow AI - Modern AI Development Platform Landing Page
 
-🚀 **Live Demo**: [View the live app on Vercel](https://your-vercel-link.vercel.app)
+🚀 **Live Demo**: [View the live app on Vercel](https://codeflow-platform-landing-3shgp9v8v.vercel.app/)
 
 ---
 
@@ -27,7 +27,6 @@ The landing page is crafted for developers and tech enthusiasts, presenting Code
 
 - **ESLint** - Code linting and quality assurance
 - **Vite Plugin React** - React integration for Vite
-- **TypeScript Support** - Type definitions for enhanced development
 
 ---
 
@@ -108,8 +107,8 @@ frontend/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/codeflow-ai-landing.git
-   cd codeflow-ai-landing
+   git clone https://github.com/Muhammad-FRAX/codeflow-platform-landing.git
+   cd codeflow-platform-landing
    ```
 
 2. **Navigate to frontend directory:**
@@ -135,7 +134,7 @@ frontend/
    ```
 
 5. **Open your browser:**
-   Navigate to `http://localhost:5173` to view the application
+   Navigate to `http://localhost:5173` or `http://localhost:2000` (depends on your config of vite) to view the application
 
 ### Build for Production
 
@@ -186,7 +185,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/codeflow-ai-landing/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Muhammad-FRAX/codeflow-platform-landing/issues).
 
 ---
 
@@ -196,4 +195,4 @@ For questions or support, please reach out through the contact form on the live 
 
 ---
 
-**Built with ❤️ for the developer community**
+**Built with 🔥 for the developer community - Frax**
